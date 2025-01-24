@@ -1,0 +1,57 @@
+/*1.Folha de estilo principal. 2.Sempre utilizar hexadecimal, rgb ou hsl nas cores, pois pelo nome pode dar um leve delay em projetos grandes.
+ */
+
+.container {
+    display: flex; /*Ativa o layout flexbox, permite organizar os itens de forma eficiente.*/
+    flex-direction: column; /*Organiza itens em uma linha horizontal: Deixa os elementos dispostos em coluna vertical.*/
+    height: 100vh;
+    background-image: url("../images/paisagem.mario.png");/*imagem de fundo, dentro da url passa o caminho que está sua imagem*/
+    background-position: center;/* Define a posição da imagem de fundo do elemento.*/ 
+    background-repeat: no-repeat; /*controla se a imagem do fundo irá se repetir quando ela é menor que o tamanho pré definido do container*/
+    background-size: cover;/* Define o tamanho da imagem dentro do elemento:  ajusta a imagem mantendo a proporção, mas pode ser cortada*/
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly; /*Distribui os itens com espaços iguais entre eles e nas extremidades do container*/
+    align-items: center; /*Alinha os itens ao centro na direção transversal.*/
+
+    height: 90px;
+    width: 100%;
+
+    background-color: #ffffff; /*cor de fundo do elemento menu*/
+    color: #000000;
+    border-bottom: 5px solid rgb(72, 190, 13); /* Adiciona uma borda abaixo*/
+}
+
+.panel {
+    margin-top: 1rem; /* dá um espaço no topo do elemento. rem: unidade de medida que ajuda a manter a proporção e responsividade*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {   /*caixinhas*/
+    height: 150px; /* altura*/
+    width: 150px; /*largura*/
+    border: 1px solid #000000;
+    background-color: #e7e731;
+}
+
+.enemy {
+    background-image: url("../images/mariobros.png.jpg"); /*"inimigo"*/
+    background-size: cover;
+}
+
+.menu-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Na div menu-time e menu-score existem duas tags filhas: "h2". Utilizando 'nth-child(2)' você diz que:
+dentro da div descrita você quer somente o segundo filho h2 (2) para aplicar as configurações, outra maneira seria adicionar uma classe para cada um e editar*/
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+    margin-top: 1rem; 
+}

@@ -1,0 +1,14 @@
+/* 1.Os navegadores possuem tamanhos padrão de página que podem variar de um para o outro,
+para o layout da sua página não ficar diferente dependendo do navegador,você cria um estilo, que aqui chamamos de "reset" 
+para iniciar as configurações do zero
+2.O asterístico é um seletor universal, aplica as configurações para tudo da página, independente das tags utilizadas.
+3. Box-sizing: tamanho da caixa, border-box: de borda a borda, sem contar as margens.
+4. Utilizado uma fonte do Google fontes, linkado no HTML(uma das maneiras de utilizar)*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: "Bebas Neue", sans-serif;*/
+    font-family: "Press Start 2P", cursive;
+}
